@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %} TicaretSitesi {% endblock %} </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content={% block keywords  %} Anasayfaanahtarkelime {% endblock %} name="keywords">
+    <meta content={% block description %} Anasayfaaçıklama {% endblock %} name="description">
+    {% load static %}
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}"  rel="icon">
+    {% load static %}
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}">
+    <link href="{% static 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap' %}"  rel="stylesheet">
+    {% load static %}
+    <!-- Font Awesome -->
+    <link href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css' %}"  rel="stylesheet">
+    {% load static %}
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    {% load static %}
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+
+    {% block head %} {% endblock %}
+
+</head>
+<body>
+    {% include 'headers.html' %}
+    {% block sidebar %}  {% endblock %}
+    {% block slider %} {% endblock %}
+    {% block content %}  {% endblock %}
+
+    {% include 'footer.html' %}
+    {% block footer %} {% include 'footer.html' %} {% endblock %}
+
+
+
+
+</body>
+
+</html>
